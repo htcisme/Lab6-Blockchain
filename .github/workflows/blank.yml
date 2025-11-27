@@ -47,7 +47,7 @@ jobs:
       # Fail workflow nếu có lỗi High Severity
       - name: Fail on High Severity issues
         run: |
-          if grep -q '"severity": "High"' slither-report.json; then
+          if grep -q '"impact": "High"' slither-report.json; then
             echo "❌ High severity issues detected!"
             exit 1
           else
