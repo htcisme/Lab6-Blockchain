@@ -42,7 +42,7 @@ jobs:
       # Chạy Slither
       - name: Run Slither
         run: |
-          slither . --json slither-report.json
+          slither . --json slither-report.json || true
 
       # Fail workflow nếu có lỗi High Severity
       - name: Fail on High Severity issues
